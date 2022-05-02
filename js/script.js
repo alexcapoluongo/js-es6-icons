@@ -115,6 +115,8 @@ const items = [
 
 // Milestone 1
 // Partendo dalla struttura dati fornita, visualizzare in pagina un box per ogni icona, in cui è presente il nome dell'icona e l'icona stessa.
+// Milestone 2
+// Ciascuna icona ha una proprietà "color": utilizzare questa proprietà per visualizzare le icone del colore corrispondente.
 
 items.forEach((element) => {
 	let container = document.getElementById('container');
@@ -124,5 +126,40 @@ items.forEach((element) => {
 							</div>`;
 });
 
-// Milestone 2
-// Ciascuna icona ha una proprietà "color": utilizzare questa proprietà per visualizzare le icone del colore corrispondente.
+// BONUS
+// Aggiungere alla pagina una select in cui le options corrispondono ai vari tipi di icone (animal, vegetable, user). Quando l'utente seleziona un tipo dalla select, visualizzare solamente le icone corrispondenti.
+
+const animals = items.filter((element) => {
+	if (element.type === "animal") {
+		return true;
+	} 
+});
+
+const vegetables = items.filter((element) => {
+	if(element.type === "vegetable") {
+		return true;
+	}
+})
+
+const users = items.filter((element) => {
+	if(element.type === "user") {
+		return true;
+	}
+});
+
+
+const filterBtn = document.getElementById('filter-button');
+//dare una variabile a select
+filterBtn.addEventListener('click', function(){
+	let userChoice = document.getElementById('filter').value;
+	if (userChoice === "animals") {
+		console.log(animals);
+	} else if (userChoice === "vegetables"){
+		console.log(vegetables);
+	} else if (userChoice === "users"){
+		console.log(users);
+	} else {
+		console.log(animals, vegetables, users);
+	}
+})
+
