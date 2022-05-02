@@ -118,7 +118,7 @@ const items = [
 
 items.forEach((element) => {
 	let container = document.getElementById('container');
-	container.innerHTML += `<div class="item">
+	container.innerHTML += `<div class="item ${element.color}">
 							<i class ="${element.family} ${element.prefix}${element.name}"></i>
 							<p>${element.name}</p>
 							</div>`;

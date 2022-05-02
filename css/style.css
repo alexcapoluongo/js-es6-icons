@@ -12,3 +12,15 @@
     flex-direction: column;
     border: 1px solid black;
 }
+
+.blue {
+    color: blue;
+}
+
+.orange {
+    color: orange;
+}
+
+.green {
+    color:green;
+}
